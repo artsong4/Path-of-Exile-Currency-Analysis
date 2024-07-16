@@ -2,6 +2,21 @@
 
 This repository contains the final project from the IST 707 Applied Machine Learning course. The project applies data mining techniques to analyze and model the fluctuating values of in-game currencies in Path of Exile (PoE), drawing parallels with real-world economic principles.
 
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Objectives](#objectives)
+- [Skills Demonstrated](#skills-demonstrated)
+- [Dataset](#dataset)
+- [Analysis](#analysis)
+  - [Data Exploration and Preprocessing](#data-exploration-and-preprocessing)
+  - [Outlier Detection](#outlier-detection)
+  - [Correlation Analysis](#correlation-analysis)
+  - [Clustering](#clustering)
+  - [Classification](#classification)
+- [Key Findings](#key-findings)
+- [Implications](#implications)
+- [Repository Structure](#repository-structure)
+
 ## Project Overview
 Path of Exile features a complex, player-driven economy. This project aims to analyze and model the fluctuating values of in-game currencies, providing insights into the economic system and drawing parallels with real-world economic principles.
 
@@ -29,7 +44,6 @@ The dataset, sourced from poe.ninja, includes transactions from the "Crucible" l
 ## Analysis
 ### Data Exploration and Preprocessing
 ![image](https://github.com/artsong4/Path-of-Exile-Currency-Analysis/assets/125407614/5b896f14-97ed-4c2f-9ed7-df56bfb45ab6)
-
 - **League**: All transactions from "Crucible".
 - **Date Range**: Data spans from 2023-04-07 to 2023-08-15.
 - **Transactions**: 'Get' and 'Pay' variables detail items or currencies exchanged.
@@ -39,21 +53,20 @@ The dataset, sourced from poe.ninja, includes transactions from the "Crucible" l
 ### Outlier Detection
 An adapted Interquartile Range (IQR) method with a multiplier of 40 was used to identify significant outliers such as "Mirror Shard" and "Mirror of Kalandra". These outliers were removed to focus on typical transactions and gain deeper insights into common trading patterns.
 ![image](https://github.com/artsong4/Path-of-Exile-Currency-Analysis/assets/125407614/a69aa906-f592-4541-8796-420a83c9ffba)
-
 ![image](https://github.com/artsong4/Path-of-Exile-Currency-Analysis/assets/125407614/ef2d4edf-f535-40bb-9a21-18f6d221e9d7)
 
 ### Correlation Analysis
 A correlation heatmap was created to visualize the relationships between the top 30 fluctuating currencies. This analysis highlighted significant volatility and revealed which currencies were most influenced by in-game events.
-
 ![image](https://github.com/artsong4/Path-of-Exile-Currency-Analysis/assets/125407614/ea61c765-8cb8-47fc-8ed8-d3551acc521c)
 ![image](https://github.com/artsong4/Path-of-Exile-Currency-Analysis/assets/125407614/ea27921d-1d2f-42fe-a9d4-ccddd7a137e5)
 
 ### Clustering
 The Elbow Method was used to determine the optimal number of clusters for K-Means clustering, resulting in three distinct clusters of transactions:
+![image](https://github.com/artsong4/Path-of-Exile-Currency-Analysis/assets/125407614/ddd080ff-a609-42c1-9270-368bcbbc3d4a)
+
 - **Cluster 1**: High-value, rare transactions.
 - **Cluster 2**: Frequent, low-value transactions.
 - **Cluster 3**: Medium-value transactions.
-![image](https://github.com/artsong4/Path-of-Exile-Currency-Analysis/assets/125407614/ddd080ff-a609-42c1-9270-368bcbbc3d4a)
 ![image](https://github.com/artsong4/Path-of-Exile-Currency-Analysis/assets/125407614/e905e5b0-95d7-4fab-a7bd-acd82ede1e9d)
 
 ### Classification
@@ -90,4 +103,3 @@ Path-of-Exile-Currency-Analysis/
 ├── PoE_Currency_Analysis.R
 ├── README.md
 ├── LICENSE
-
