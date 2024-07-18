@@ -101,5 +101,6 @@ Path-of-Exile-Currency-Analysis/
 ├── data/
 │   ├── Currency.xlsx
 ├── PoE_Currency_Analysis.R
+├── Poe_Currency_Analysis_Report.docx
 ├── README.md
 ├── LICENSE
